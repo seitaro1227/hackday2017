@@ -13,7 +13,7 @@ class AmasonKozuchiController < ApplicationController
       # 画像認証の可能性あり
       # page.driver.browser.cookies
       page.save_page 'page.html'
-      render html: page.html
+      render html: page.html and return
       # render json: {result: false, name:'', message:'loged_in 失敗'} and return
     end
     item = wish_list_any_one_click
@@ -23,8 +23,9 @@ class AmasonKozuchiController < ApplicationController
       # break_through_confirm
       render json: {result: true, name:item[:name], message:''} and return
     else
-      raise
-      render json: {result: false, name:'', message:'商品がないっぽい',} and return
+      render html: page.html and return
+      # raise
+      # render json: {result: false, name:'', message:'商品がないっぽい',} and return
     end
   end
 
