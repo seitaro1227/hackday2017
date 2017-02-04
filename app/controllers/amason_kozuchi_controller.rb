@@ -13,8 +13,8 @@ class AmasonKozuchiController < ApplicationController
       # 画像認証の可能性あり
       # page.driver.browser.cookies
       page.save_page 'page.html'
-      raise
-      render json: {result: false, name:'', message:'loged_in 失敗'} and return
+      render html: page.html
+      # render json: {result: false, name:'', message:'loged_in 失敗'} and return
     end
     item = wish_list_any_one_click
     
@@ -24,7 +24,7 @@ class AmasonKozuchiController < ApplicationController
       render json: {result: true, name:item[:name], message:''} and return
     else
       raise
-      render json: {result: false, name:'', message:'商品がないっぽい'} and return
+      render json: {result: false, name:'', message:'商品がないっぽい',} and return
     end
   end
 
@@ -37,7 +37,7 @@ private
       driver = Capybara::Mechanize::Driver.new(app)
       driver.configure do |agent|
         # Configure other Mechanize options here.
-        agent.log = Logger.new "mech.log"
+        # agent.log = Logger.new "mech.log"
         agent.user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'
       end
       driver
