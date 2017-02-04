@@ -63,6 +63,10 @@ gem 'resque'
 gem 'resque-scheduler'
 gem 'active_scheduler'
 
+# Scraping
+gem 'capybara'
+gem 'poltergeist'
+
 # Debugger
 group :development do
   gem 'web-console', '~> 2.0'
