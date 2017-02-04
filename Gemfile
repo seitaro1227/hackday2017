@@ -63,6 +63,9 @@ gem 'resque'
 gem 'resque-scheduler'
 gem 'active_scheduler'
 
+# Scraping
+gem 'capybara-mechanize'
+
 # Debugger
 group :development do
   gem 'web-console', '~> 2.0'
