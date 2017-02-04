@@ -23,17 +23,11 @@ gem 'dotenv-rails'
 gem 'config', '~> 1.0.0'
 
 # Database
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'pg'
 gem 'redis-rails'
 
 # Seeds
 gem 'seed-fu'
-
-# Upload
-gem 'carrierwave'
-gem 'carrierwave-data-uri'
-gem 'fog', require: 'fog/aws'
-gem 'mini_magick'
 
 # Search/Pagination
 gem 'kaminari'
@@ -73,6 +67,11 @@ gem 'active_scheduler'
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'listen'
+end
+
+# Heroku
+group :production do
+  gem 'rails_12factor'
 end
 
 group :development, :test do

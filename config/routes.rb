@@ -4,10 +4,8 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
   end
 
-  resource :users do
-    resource :sign_up, controller: 'users/sign_up', only: [:show, :create]
-    resource :sign_in, controller: 'users/sign_in', only: [:show, :create]
-    resource :sign_out, controller: 'users/sign_out', only: [:destroy]
+  scope '/api/v1' do
+    resource :amason_kozuchi, controller: :amason_kozuchi
   end
 
   root 'home#index'

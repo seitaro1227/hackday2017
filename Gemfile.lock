@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (2.3.4)
     actioncable (5.0.1)
       actionpack (= 5.0.1)
       nio4r (~> 1.2)
@@ -103,12 +102,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (1.0.0)
-      activemodel (>= 4.0.0)
-      activesupport (>= 4.0.0)
-      mime-types (>= 1.16)
-    carrierwave-data-uri (0.0.3)
-      carrierwave
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     code_analyzer (0.4.7)
@@ -146,7 +139,6 @@ GEM
       railties (>= 3.2, < 5.1)
     equalizer (0.0.11)
     erubis (2.7.0)
-    excon (0.54.0)
     execjs (2.7.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
@@ -158,136 +150,8 @@ GEM
     faraday (0.10.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.17)
-    fission (0.5.0)
-      CFPropertyList (~> 2.2)
-    fog (1.38.0)
-      fog-aliyun (>= 0.1.0)
-      fog-atmos
-      fog-aws (>= 0.6.0)
-      fog-brightbox (~> 0.4)
-      fog-cloudatcost (~> 0.1.0)
-      fog-core (~> 1.32)
-      fog-dynect (~> 0.0.2)
-      fog-ecloud (~> 0.1)
-      fog-google (<= 0.1.0)
-      fog-json
-      fog-local
-      fog-openstack
-      fog-powerdns (>= 0.1.1)
-      fog-profitbricks
-      fog-rackspace
-      fog-radosgw (>= 0.0.2)
-      fog-riakcs
-      fog-sakuracloud (>= 0.0.4)
-      fog-serverlove
-      fog-softlayer
-      fog-storm_on_demand
-      fog-terremark
-      fog-vmfusion
-      fog-voxel
-      fog-vsphere (>= 0.4.0)
-      fog-xenserver
-      fog-xml (~> 0.1.1)
-      ipaddress (~> 0.5)
-    fog-aliyun (0.1.0)
-      fog-core (~> 1.27)
-      fog-json (~> 1.0)
-      ipaddress (~> 0.8)
-      xml-simple (~> 1.1)
-    fog-atmos (0.1.0)
-      fog-core
-      fog-xml
-    fog-aws (1.1.0)
-      fog-core (~> 1.38)
-      fog-json (~> 1.0)
-      fog-xml (~> 0.1)
-      ipaddress (~> 0.8)
-    fog-brightbox (0.11.0)
-      fog-core (~> 1.22)
-      fog-json
-      inflecto (~> 0.0.2)
-    fog-cloudatcost (0.1.2)
-      fog-core (~> 1.36)
-      fog-json (~> 1.0)
-      fog-xml (~> 0.1)
-      ipaddress (~> 0.8)
-    fog-core (1.43.0)
-      builder
-      excon (~> 0.49)
-      formatador (~> 0.2)
-    fog-dynect (0.0.3)
-      fog-core
-      fog-json
-      fog-xml
-    fog-ecloud (0.3.0)
-      fog-core
-      fog-xml
-    fog-google (0.1.0)
-      fog-core
-      fog-json
-      fog-xml
-    fog-json (1.0.2)
-      fog-core (~> 1.0)
-      multi_json (~> 1.10)
-    fog-local (0.3.1)
-      fog-core (~> 1.27)
-    fog-openstack (0.1.19)
-      fog-core (>= 1.40)
-      fog-json (>= 1.0)
-      ipaddress (>= 0.8)
-    fog-powerdns (0.1.1)
-      fog-core (~> 1.27)
-      fog-json (~> 1.0)
-      fog-xml (~> 0.1)
-    fog-profitbricks (3.0.0)
-      fog-core (~> 1.42)
-      fog-json (~> 1.0)
-    fog-rackspace (0.1.4)
-      fog-core (>= 1.35)
-      fog-json (>= 1.0)
-      fog-xml (>= 0.1)
-      ipaddress (>= 0.8)
-    fog-radosgw (0.0.5)
-      fog-core (>= 1.21.0)
-      fog-json
-      fog-xml (>= 0.0.1)
-    fog-riakcs (0.1.0)
-      fog-core
-      fog-json
-      fog-xml
-    fog-sakuracloud (1.7.5)
-      fog-core
-      fog-json
-    fog-serverlove (0.1.2)
-      fog-core
-      fog-json
-    fog-softlayer (1.1.4)
-      fog-core
-      fog-json
-    fog-storm_on_demand (0.1.1)
-      fog-core
-      fog-json
-    fog-terremark (0.1.0)
-      fog-core
-      fog-xml
-    fog-vmfusion (0.1.0)
-      fission
-      fog-core
-    fog-voxel (0.1.0)
-      fog-core
-      fog-xml
-    fog-vsphere (1.6.0)
-      fog-core
-      rbvmomi (~> 1.9)
-    fog-xenserver (0.2.3)
-      fog-core
-      fog-xml
-    fog-xml (0.1.2)
-      fog-core
-      nokogiri (~> 1.5, >= 1.5.11)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
-    formatador (0.2.5)
     fuubar (2.2.0)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
@@ -297,8 +161,6 @@ GEM
       rails (>= 3.1.0)
     i18n (0.7.0)
     ice_nine (0.11.2)
-    inflecto (0.0.2)
-    ipaddress (0.8.3)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -342,14 +204,12 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_magick (4.6.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     mono_logger (1.1.0)
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
-    mysql2 (0.4.5)
     nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -370,6 +230,7 @@ GEM
       activerecord (>= 5.0.0, < 5.1)
     parser (2.3.3.1)
       ast (~> 2.2)
+    pg (0.19.0)
     polyamorous (1.3.1)
       activerecord (>= 3.0)
     powerpack (0.1.1)
@@ -412,6 +273,9 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_best_practices (1.17.0)
       activesupport
       code_analyzer (>= 0.4.3)
@@ -420,6 +284,8 @@ GEM
       json
       require_all
       ruby-progressbar
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.1)
       actionpack (= 5.0.1)
       activesupport (= 5.0.1)
@@ -437,11 +303,6 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    rbvmomi (1.9.4)
-      builder (~> 3.2)
-      json (>= 1.8)
-      nokogiri (~> 1.5)
-      trollop (~> 2.1)
     rdoc (4.3.0)
     redis (3.3.2)
     redis-actionpack (5.0.1)
@@ -568,7 +429,6 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.5)
     timecop (0.8.1)
-    trollop (2.1.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.4)
@@ -596,7 +456,6 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    xml-simple (1.1.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
     yard (0.9.8)
@@ -621,8 +480,6 @@ DEPENDENCIES
   capistrano-rbenv
   capistrano3-puma
   capybara
-  carrierwave
-  carrierwave-data-uri
   coffee-rails
   coffeelint
   config (~> 1.0.0)
@@ -630,7 +487,6 @@ DEPENDENCIES
   dotenv-rails
   factory_girl_rails
   faker
-  fog
   font-awesome-rails
   fuubar
   gretel
@@ -641,11 +497,10 @@ DEPENDENCIES
   letter_opener_web
   listen
   migration_comments
-  mini_magick
-  mysql2 (>= 0.3.18, < 0.5)
   nested_form
   paranoia
   paranoia_uniqueness_validator
+  pg
   pry
   pry-byebug
   pry-doc
@@ -654,6 +509,7 @@ DEPENDENCIES
   puma
   pundit
   rails (= 5.0.1)
+  rails_12factor
   rails_best_practices
   ransack
   redis-rails
